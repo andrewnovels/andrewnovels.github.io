@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Andrei Burmistrov</title>
+<meta name="description" content="Andrei Burmistrov, narrative designer and writer: game dialogue, commercial writing and fiction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<style>
+/* Layout: one left-aligned column of big type; three sections split by heavy rules; every link is a hard-shadowed block. Black and white only, matching the dialogue piece. */
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --grey: #5c5c5c;
+  --grey-light: #b8b8b8;
+  --display: "Dela Gothic One", "Arial Black", Impact, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --shadow: 6px 6px 0 var(--black);
+  --shadow-out: 8px 8px 0 0 var(--white), 8px 8px 0 3px var(--black);
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--white); }
+body { margin: 0; background: var(--white); color: var(--black); font-family: var(--body); font-size: 18px; line-height: 1.55; }
+
+main {
+  max-width: 820px; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+  padding-block: 56px 88px;
+  display: grid; gap: 72px;
+}
+
+header { display: grid; gap: 22px; }
+.name { justify-self: start; max-width: calc(100% - 12px); background: var(--black); color: var(--white); padding: 16px 24px 14px; box-shadow: var(--shadow-out); }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.6rem, 9vw, 5.2rem); line-height: 1; margin: 0; text-wrap: balance; }
+.role { font-size: clamp(1.25rem, 3vw, 1.6rem); font-weight: 600; margin: 0; }
+.contacts { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 0; padding: 0; list-style: none; font-family: var(--mono); font-size: .95rem; }
+.contacts a { color: inherit; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+
+section { display: grid; gap: 18px; border-top: 6px solid var(--black); padding-top: 28px; }
+.eyebrow { font-family: var(--mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--grey); margin: 0; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.05; margin: 0; text-wrap: balance; }
+.lead { font-size: clamp(1.1rem, 2.4vw, 1.3rem); max-width: 56ch; margin: 0; }
+
+.links { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 18px; }
+.link {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 16px 20px; margin-right: 8px;
+  background: var(--white); color: var(--black); text-decoration: none;
+  border: 3px solid var(--black); box-shadow: var(--shadow);
+  transition: transform .08s, box-shadow .08s;
+}
+.link > div { min-width: 0; }
+.link:hover { transform: translate(3px, 3px); box-shadow: 3px 3px 0 var(--black); }
+.link:active { transform: translate(6px, 6px); box-shadow: none; }
+.link strong { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(1.15rem, 2.6vw, 1.45rem); line-height: 1.2; text-wrap: balance; }
+.link .ctx { display: block; margin-top: 4px; font-family: var(--mono); font-size: .82rem; color: var(--grey); }
+.link .arrow { flex: none; font-family: var(--display); font-size: 1.6rem; }
+.link.primary { background: var(--black); color: var(--white); box-shadow: var(--shadow-out); padding-block: 22px; }
+.link.primary:hover { box-shadow: 4px 4px 0 0 var(--white), 4px 4px 0 3px var(--black); }
+.link.primary strong { font-size: clamp(1.4rem, 3.4vw, 1.9rem); }
+.link.primary .ctx { color: var(--grey-light); }
+
+.note { font-family: var(--mono); font-size: .9rem; margin: 6px 0 0; }
+
+a:focus-visible { outline: 3px solid var(--black); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="name"><h1>Andrei Burmistrov</h1></div>
+    <p class="role">Narrative designer &amp; writer</p>
+    <ul class="contacts">
+      <li><a href="mailto:enfiros@gmail.com">enfiros@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/andrei-burmistrov-2a75a584/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </header>
+
+  <section aria-labelledby="s-game">
+    <p class="eyebrow">Playable · written and scripted in Ink</p>
+    <h2 id="s-game">Game dialogue</h2>
+    <p class="lead">Who Ordered the Chip, a spec scene for SPINE. Redline corners Oscar, a local hacker, to find out who ordered a faulty chip. There are three ways to make him talk, and two depend on her stats.</p>
+    <ul class="links">
+      <li><a class="link primary" href="https://enfiros.itch.io/who-ordered-the-chip" target="_blank" rel="noopener"><div><strong>Play the scene</strong><span class="ctx">itch.io · about 2 minutes</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="s-commercial">
+    <p class="eyebrow">10 years</p>
+    <h2 id="s-commercial">Commercial writing</h2>
+    <p class="lead">A decade of commercial writing: interviews, viral marketing campaigns and game development content.</p>
+    <ul class="links">
+      <li><a class="link" href="https://www.circuitstream.com/blog/c-vs-c-complete-comparison-between-unity-and-unreal-programming-language" target="_blank" rel="noopener"><div><strong>C# vs C++: Complete Comparison Between Unity and Unreal Programming Language</strong><span class="ctx">Circuit Stream · Game dev</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+      <li><a class="link" href="https://icons8.com/blog/articles/what-neural-net-says-about-your-doodles/" target="_blank" rel="noopener"><div><strong>What Neural Network Can Tell About Your Doodles?</strong><span class="ctx">Icons8 · Viral marketing</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+      <li><a class="link" href="https://icons8.medium.com/why-you-shouldnt-ask-a-developer-to-fix-your-bike-80cda110331f" target="_blank" rel="noopener"><div><strong>Why You Shouldn't Ask a Developer to Fix Your Bike</strong><span class="ctx">Icons8 · Viral marketing</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="s-personal">
+    <p class="eyebrow">Fiction</p>
+    <h2 id="s-personal">Personal writing</h2>
+    <p class="lead">A short story published on Reddit's r/HFY, plus two books in progress.</p>
+    <ul class="links">
+      <li><a class="link" href="https://www.reddit.com/r/HFY/comments/1wblkkj/that_one_human_quality/" target="_blank" rel="noopener"><div><strong>That One Human Quality</strong><span class="ctx">Short story · Reddit r/HFY</span></div><span class="arrow" aria-hidden="true">→</span></a></li>
+    </ul>
+    <p class="note">Book excerpts available on request: <a href="mailto:enfiros@gmail.com" style="color:inherit;text-decoration-thickness:2px;text-underline-offset:4px">enfiros@gmail.com</a></p>
+  </section>
+</main>
+</body>
+</html>
